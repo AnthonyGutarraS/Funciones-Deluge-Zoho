@@ -1,4 +1,5 @@
-
+void automation.Actualizar_Clasificacion_Deals(Int oportunidadId)
+{
 info "Función llamada correctamente";
 oportunidad = zoho.crm.getRecordById("Deals",oportunidadId.toString());
 nuevaClasificacion = oportunidad.get("CLASIFICACI_N");
@@ -36,4 +37,5 @@ if(cuotasRelacionadas.size() > 0)
 else
 {
 	info "No se encontraron cuotas relacionadas con la oportunidad: " + oportunidadId;
+}
 }
